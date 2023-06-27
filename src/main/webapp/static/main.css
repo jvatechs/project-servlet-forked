@@ -9,3 +9,11 @@ td {
     text-align: center;
     empty-cells: show;
 }
+h1 {
+    text-align: center;
+    font-family: fantasy;
+}
+table {
+    margin-right: auto;
+    margin-left: auto;
+}

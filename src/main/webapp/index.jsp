@@ -8,8 +8,10 @@
     <link href="static/main.css" rel="stylesheet">
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <script src="<c:url value="/static/jquery-3.6.0.min.js"/>"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+
 <h1>Tic-Tac-Toe</h1>
 
 
@@ -38,16 +40,21 @@
 
 <c:if test="${winner == CROSSES}">
     <h1>CROSSES WIN!</h1>
-    <button onclick="restart()">Start again</button>
+    <div class="text-center">
+        <button onclick="restart()" class="btn btn-primary">Start again</button>
+    </div>
 </c:if>
 <c:if test="${winner == NOUGHTS}">
     <h1>NOUGHTS WIN!</h1>
-    <button onclick="restart()">Start again</button>
+    <div class="text-center">
+        <button onclick="restart()" class="btn btn-primary">Start again</button>
+    </div>
 </c:if>
 <c:if test="${draw}">
     <h1>IT'S A DRAW</h1>
-    <br>
-    <button onclick="restart()">Start again</button>
+    <div class="text-center">
+        <button onclick="restart()" class="btn btn-primary">Start again</button>
+    </div>
 </c:if>
 <script>
     function restart() {
